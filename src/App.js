@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Grid from './components/Grid';
+import useWindowSize from "./hooks/UseWindowSize";
+import {images} from './mocks/images';
 
 function App() {
+  let windowSize = useWindowSize();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ display: 'flex', alignItems: 'center', flexDirection: 'column',fontSize:'30px'}}>
+      <div>Wedding Gallery</div>
+       <Grid
+        images={images}
+        rowHeight={200}
+        margin={5}
+        isLightboxEnabled={true}
+        width={Math.floor(windowSize.innerWidth * 0.9)}
+      />
     </div>
   );
 }

@@ -1,3 +1,12 @@
+:root {
+  --gold: #ffd700;
+  --pastel: #f0f0f0;
+}
+
+body {
+  background-color: var(--pastel);
+}
+
 .App {
   text-align: center;
 }
