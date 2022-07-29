@@ -13,7 +13,6 @@ function App() {
         images={images}
         rowHeight={200}
         margin={5}
-        isLightboxEnabled={true}
         width={Math.floor(windowSize.innerWidth * 0.9)}
       />
     </div>
